@@ -1,0 +1,10 @@
+{
+  "name": "StudySpark AI Study Assistant",
+  "short_name": "StudySpark",
+  "description": "Your friendly AI tutor for every subject.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fbfbfd",
+  "theme_color": "#f7f8fc",
+  "icons": [{ "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

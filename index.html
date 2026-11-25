@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc"><meta name="description" content="Your friendly AI tutor for maths, science, and every subject.">
+  <link rel="manifest" href="./manifest.json"><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css">
+  <title>StudySpark — your AI study buddy</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="StudySpark home"><span class="brand-mark">✳</span><span>study<span class="brand-light">spark</span></span></a>
+      <button class="new-chat" id="new-chat"><span>＋</span> New chat</button>
+      <div class="side-label">YOUR LEARNING</div>
+      <button class="side-link active" data-subject=""><span class="side-icon">◉</span> All subjects</button>
+      <button class="side-link" data-subject="Mathematics"><span class="side-icon lilac">∑</span> Mathematics</button>
+      <button class="side-link" data-subject="Physics"><span class="side-icon blue">◌</span> Physics</button>
+      <button class="side-link" data-subject="Chemistry"><span class="side-icon coral">⚗</span> Chemistry</button>
+      <button class="side-link" data-subject="Biology"><span class="side-icon green">✿</span> Biology</button>
+      <button class="side-link" data-subject="Other subjects"><span class="side-icon gold">✧</span> Other subjects</button>
+      <div class="sidebar-bottom"><div class="streak-card"><span class="streak-icon">⚡</span><div><b>Keep the spark going!</b><small>A little progress every day adds up.</small></div></div><div class="profile"><div class="avatar">S</div><div><b>Study buddy</b><small>Ready to learn</small></div><span class="profile-dots">···</span></div></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button class="mobile-menu" id="menu-toggle" aria-label="Open menu">☰</button><div class="crumb">Your learning space <span>/</span> <b id="crumb-subject">All subjects</b></div><div class="top-actions"><span class="online-dot"></span><span class="online-text">Your tutor is ready</span><button class="install-btn" id="install-btn" hidden>↓ Install app</button></div></header>
+      <section class="content" id="welcome-view">
+        <div class="welcome-copy"><div class="eyebrow"><span>✦</span> YOUR PERSONAL AI TUTOR</div><h1>Big questions.<br><span>Brighter answers.</span></h1><p>From tricky equations to those “wait, how does that work?” moments — let’s figure it out together.</p><div class="trust-row"><div class="tiny-faces"><i>👩🏽‍🎓</i><i>👨🏻‍🎓</i><i>👩🏼‍🎓</i></div><span>A friendly space to learn at your pace</span></div></div>
+        <div class="spark-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orb-core">✳</div><span class="float-note note-a">x² + y²</span><span class="float-note note-b">E = mc²</span><span class="float-note note-c">H₂O</span><span class="sparkle s1">✦</span><span class="sparkle s2">✧</span></div>
+        <div class="section-heading"><div><h2>What are we exploring today?</h2><p>Pick a subject or ask anything on your mind.</p></div><span class="step-badge">01 <i>/</i> 03</span></div>
+        <div class="subject-grid">
+          <button class="subject-card math" data-subject="Mathematics"><span class="subject-icon">∑</span><span class="card-arrow">↗</span><b>Mathematics</b><small>Make numbers make sense</small></button>
+          <button class="subject-card physics" data-subject="Physics"><span class="subject-icon">◉</span><span class="card-arrow">↗</span><b>Physics</b><small>Understand how things work</small></button>
+          <button class="subject-card chemistry" data-subject="Chemistry"><span class="subject-icon">⚗</span><span class="card-arrow">↗</span><b>Chemistry</b><small>Explore the building blocks</small></button>
+          <button class="subject-card biology" data-subject="Biology"><span class="subject-icon">✿</span><span class="card-arrow">↗</span><b>Biology</b><small>Discover living things</small></button>
+          <button class="subject-card any-subject" data-subject="Any subject"><span class="subject-icon">✧</span><span class="card-arrow">↗</span><b>Any subject</b><small>Ask about anything else</small></button>
+        </div>
+      </section>
+      <section class="chat-view" id="chat-view" hidden><button class="back-button" id="back-button" aria-label="Back to subjects"><span>←</span> Back</button><div class="chat-heading"><div class="eyebrow"><span>✦</span> LEARNING TOGETHER</div><h1 id="chat-title">Let’s figure it out.</h1><p id="chat-subtitle">Ask a question and I’ll walk you through it.</p></div><div class="messages" id="messages" aria-live="polite"></div><form id="followup-form" class="followup"><textarea id="followup-input" rows="1" placeholder="Type your question here..." aria-label="Ask a question"></textarea><button type="submit" class="send-btn" aria-label="Send">↑</button></form><div class="chat-disclaimer">StudySpark can make mistakes. Check important answers with your teacher or textbook.</div></section>
+    </main>
+  </div>
+  <script src="./app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "studyspark-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An installable AI study assistant for every subject.",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=20" }
+}

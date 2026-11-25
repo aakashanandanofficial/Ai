@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: studyspark-ai
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: PUBLIC_DEMO
+        value: "true"
