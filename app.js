@@ -26,6 +26,10 @@ async function ask(question) {
   document.querySelectorAll('.send-btn').forEach(b=>b.disabled=true);
   try {
     const response = await fetch(new URL('api/chat', window.location.href),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:history})});
+    const contentType = response.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      throw new Error('This website has no AI server connected. For your local Ollama tutor, open http://localhost:3000 on the same computer where Ollama is running, using Start StudySpark.bat. A GitHub-hosted copy needs its own online AI server.');
+    }
     const data = await response.json(); if (!response.ok) throw new Error(data.error || 'I couldn’t connect right now. Please try again.');
     waiting.classList.remove('typing'); waiting.textContent = data.answer; history.push({role:'assistant',content:data.answer});
   } catch(error) { waiting.classList.remove('typing'); waiting.textContent = `I hit a snag: ${error.message}`; history.pop(); }
